@@ -1,5 +1,6 @@
 // 1.cpp
 // Remove Duplicates from Sorted Array
+// didnt get the same answer as leetcode... they want the same array to be modified. I created a new array myVector
 
 #include <stdio.h>
 #include <iostream>
