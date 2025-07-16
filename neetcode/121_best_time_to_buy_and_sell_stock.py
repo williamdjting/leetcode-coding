@@ -14,20 +14,22 @@ class Solution:
         
         # return profit
 
-        minPrice = float('inf')
-
-        maxProfit = 0
 
         #in checking each price,
         # we are either setting the new price lower (floor),
         # or we are setting the new max profit (ceiling)
 
 
+        #prices = [10,1,5,6,7,1]
+
+        minPrice = float('inf') # starts at 1000
+        maxProfit = 0
+
         for price in prices:
             if price < minPrice:
-                minPrice = price
+                minPrice = price # find the floor
             else:
-                profit = price - minPrice
-                maxProfit = max(maxProfit, profit)
+                profit = price - minPrice # find the current floor to current price, profit
+                maxProfit = max(maxProfit, profit) # is this profit the highest possible
 
-        return maxProfit
+        return maxProfit # return max found
