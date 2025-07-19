@@ -9,6 +9,9 @@ class ListNode:
 
 # Solution with reverseList method
 class Solution:
+
+    #https://chatgpt.com/share/687b62d9-f9ec-8008-b0f3-a21bb9abff4e
+
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         prev = None
         current = head
