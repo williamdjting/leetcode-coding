@@ -21,8 +21,9 @@ class Solution:
         print("count", count)
         return count
     
-# root = [3,9,20,None,None,15,7]
+# root = [3,9,20,None,None,15,7] #not a binary tree
 
+# must construct it as a binary tree firstly
 root = TreeNode(3)
 root.left = TreeNode(9)
 root.right = TreeNode(20)
