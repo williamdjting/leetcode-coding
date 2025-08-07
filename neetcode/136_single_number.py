@@ -15,7 +15,8 @@ class Solution:
             #     if count == 1:
             #         print("value", nums[num])
 
-                
+
+        # works , hashmap method      
         #     # Count occurrences
         # for num in nums:
         #     if num not in hashMap:
@@ -30,7 +31,7 @@ class Solution:
         #         return num  # or print(num)
 
 
-
+        # works, XOR method
         result = 0
         for num in nums:
             result ^= num
