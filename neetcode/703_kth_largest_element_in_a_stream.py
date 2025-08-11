@@ -59,5 +59,3 @@ obj.add(10)
 obj.add(9)
 obj.add(4)
 # print(param_1)
-
-print(obj)
