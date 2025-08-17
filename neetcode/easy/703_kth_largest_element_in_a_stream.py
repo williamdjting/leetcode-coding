@@ -33,11 +33,11 @@ class KthLargest:
         # Add the new value
         heapq.heappush(self.heap, val)
 
-        # If heap grows beyond size k, remove smallest
+        # If heap grows beyond size k, remove smallest which is at the top of heap
         if len(self.heap) > self.k:
             heapq.heappop(self.heap)
 
-        # The smallest in heap is the k-th largest overall
+        # The smallest in heap is the k-th largest overall, sitting at top
         return self.heap[0]
 
 
