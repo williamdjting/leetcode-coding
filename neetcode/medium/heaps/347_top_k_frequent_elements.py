@@ -15,7 +15,8 @@ class Solution:
         arr = []
         for num, cnt in count.items():
             arr.append([cnt, num])
-        arr.sort()
+        arr.sort() 
+        # using .sort() on the existing list to modify is easier to manage but only works on lists
 
         res = []
         while len(res) < k:
@@ -47,6 +48,8 @@ class Solution:
 
         
         returnList = [None] * k # list of size k to be filled
+
+        # im sorting a dictionary with sorted() which works on any iterable but then it needs to use a lambda function and reverse it to make it ascending order
 
         sorted_counts = sorted(count.items(), key=lambda x: x[1], reverse=True)
 
