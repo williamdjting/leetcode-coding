@@ -1,10 +1,11 @@
 class Solution:
     def spiralOrder(self, matrix: list[list[int]]) -> list[int]:
+        # total shit question - very tricky cause you have to know how to manipulate many cells in the matrix
         
         # spiral order is like
         # 0,0 -> 0,1 -> 0,2 -> 1,2 -> 2,2 -> 2,1 -> 2,0 -> 1,0 -> 1,1
 
-        # recursive
+        # solution 1 ) recursive
         m, n = len(matrix), len(matrix[0])
         res = []
 
@@ -26,7 +27,7 @@ class Solution:
         return res
     
 
-        # iteratively
+        # solution 2 ) iteratively
         res = []
         left, right = 0, len(matrix[0])
         top, bottom = 0, len(matrix)

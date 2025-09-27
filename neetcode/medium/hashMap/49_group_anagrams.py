@@ -18,7 +18,7 @@ class Solution:
 
         # store each value of strs in a hashmap by index
 
-        for i in range(n):
+        for i in range(n):    
             print("word is", strs[i],"\n")
             count = 0
             for index, letter in enumerate(strs[i]):
