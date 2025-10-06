@@ -7,7 +7,6 @@ class Solution:
         return
     
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
-    
         '''
         the island  which is the graph matrix touches the top, left = Pacific and the right, bottom = Atlantic
         
@@ -24,13 +23,23 @@ class Solution:
         if rowSize < 0 or rowSize > len(heights) or colSize < 0 or colSize > len(heights[0]):
             return -1
         
-        graph : DefaultDict[List[List[int]]]= defaultdict(list)
         
+        def dfs(self, graph: List[List[int]] ) -> int:
+            
+        
+        graph : DefaultDict[List[List[int]]]= defaultdict(list)
+        height = 0
         for r in range(rowSize):
             for c in range(colSize):
                  val = heights[r][c] 
                  # height above sea level of the cell at coordinate (r, c)
-        
+                 if height <  val:
+                     height = val
+                     
+                 else:
+                     height  = max(val , height)
+                
+                        
 
 
 
