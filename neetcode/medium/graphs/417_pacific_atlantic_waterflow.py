@@ -6,6 +6,10 @@ class Solution:
     def __init__ (self):
         return
     
+    # the actual solution
+    # https://chatgpt.com/share/68e5fc6e-5610-8008-ad4e-8a1229a95af7
+    
+    
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
         '''
         the island  which is the graph matrix touches the top, left = Pacific and the right, bottom = Atlantic
@@ -23,23 +27,41 @@ class Solution:
         if rowSize < 0 or rowSize > len(heights) or colSize < 0 or colSize > len(heights[0]):
             return -1
         
+        graph = {}
+
+        for i in range(rowSize):
+            graph[i] = []
+
+        for u, v in heights:
+            # go both ways
+            graph[v].append(u) #v-> u 
+            graph[u].append(v) #u-> v 
         
         def dfs(self, graph: List[List[int]] ) -> int:
+            height = 0
             
+            val = graph[r][c] 
+                 # height above sea level of the cell at coordinate (r, c)
+            if height <  val:
+                height = val
+            else:
+                height  = max(val , height)
+            
+            for neighbour in graph[r][c]:
+                if not dfs(neighbour):
+                    return False
+
+            return r, c
+            
+        res : List[tuple[int]] = []
         
-        graph : DefaultDict[List[List[int]]]= defaultdict(list)
-        height = 0
+
         for r in range(rowSize):
             for c in range(colSize):
-                 val = heights[r][c] 
-                 # height above sea level of the cell at coordinate (r, c)
-                 if height <  val:
-                     height = val
-                     
-                 else:
-                     height  = max(val , height)
-                
+                 if not dfs(graph):
+                    res.append[(r, c)]
                         
+        return res
 
 
 
